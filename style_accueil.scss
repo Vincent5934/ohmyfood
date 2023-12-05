@@ -1,0 +1,243 @@
+// VARIABLES
+$background:#f6f6f6;
+$background-location:#EAEAEA;
+$background-footer:#353535;
+$primary:#9356DC;
+$secondary:#FF79DA;
+$tertiary:#99E2D0;
+
+// FUNCTION
+@function rem($size, $base: 16){
+    @return 1rem * $size / $base;
+}
+
+// MIXINS
+@mixin flexRowCenter{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumnCenter{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexRow{
+    display: flex;
+    flex-direction: row;
+}
+  
+
+// GENERAL
+*{
+margin:0;
+padding:0;
+font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+h1{font-family: 'Shrikhand', serif;}
+
+h4{
+    color:#008766;
+    background-color:$tertiary;
+    font-size: rem(14);
+    font-weight: 500;
+    margin:rem(15) rem(12) 0 rem(248);
+    padding: rem(7) rem(9) rem(6) rem(9);
+    position: absolute;
+    
+}
+
+
+// HEADER
+header{
+    @include flexRowCenter;    
+   
+}
+
+.header__logo{
+    width: rem(162);
+    height:rem(44);
+    margin:rem(14) rem(89) rem(13) rem(89);
+}
+ 
+.location{
+    @include flexRowCenter;
+    height:rem(50);
+    gap: rem(17);
+    background:$background-location;
+}
+
+// INFORMATION
+.info{
+    width:100%;
+    @include flexColumnCenter;
+    background: $background;
+    text-align: center;
+    padding-top:rem(30);
+    padding-bottom: rem(30);
+    gap:rem(18);
+}
+
+.btn{
+    @include flexRowCenter;
+    width: rem(218);
+    height:rem(50);
+    background:linear-gradient($secondary,$primary);
+    border-radius: rem(25);
+    box-shadow: 0 rem(4) rem(18) 0 rgba(0,0,0,0.25);
+    color:white;  
+    }
+
+
+// FONCTIONNEMENT
+.fonctionnement{
+    @include flexColumnCenter;
+    gap:rem(25);
+    padding-bottom: rem(30);
+}
+
+.fonctionnement__titre{
+    padding:rem(48) rem(80) rem(26) rem(20);
+    
+}
+
+.fonctionnement__carte{
+    display:flex;
+    width: rem(322);
+    height:rem(72);
+    background:$background;
+    border-radius: rem(20);
+    box-shadow: 0 rem(4) rem(18) 0 rgba(0,0,0,0.15);
+    align-items: center; 
+    }
+
+.fonctionnement__carte--text{
+    @include flexRow;
+    align-items: baseline;
+    gap:rem(25);
+    margin-left: rem(-15);
+}
+
+.rond{
+    background:$primary;
+    border-radius: rem(100);
+    color:white;
+    padding: 5px 8px 5px 8px;
+}
+
+.fa-store{
+    color:$primary;
+}
+
+// RESTAURANT
+.restaurant{
+    background: $background;
+    padding-bottom: rem(50);
+    }
+
+.restaurant__bloc {
+    @include flexColumnCenter;
+    }
+
+.restaurant__titre{
+    padding:rem(48) rem(80) rem(26) rem(20);    
+    }
+
+.restaurant__carte{
+    width:rem(346);
+    @include flexColumn;
+    background-color: white;
+    border-radius:rem(15);
+    box-shadow:0 rem(4) rem(15) 0 rgba(0,0,0,0.10);
+    margin-bottom: rem(18); 
+    }
+
+.restaurant__carte--img{
+    width: rem(346);
+    height:rem(178);
+    object-fit: cover;
+    border-radius: rem(15) rem(15) 0 0;
+    }
+
+.restaurant__carte--text{
+    @include flexColumn;
+    padding:rem(18) 0 rem(18) rem(18);
+    gap:rem(5);
+    }
+
+.fa-heart{
+    color:linear-gradient($primary,$secondary);
+}
+
+// FOOTER
+footer{
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: rem(16);
+    background: $background-footer;
+    padding:rem(22) rem(25) rem(22) rem(25);
+    color:white;
+}
+
+.footer__logo{
+    font-family: 'shrikhand', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer__text{
+    @include flexRow;
+    gap:rem(11);
+}
+
+.fa-handshake-angle {
+    width: rem(11);
+    height:rem(13);
+}
+
+.fa-utensils{
+    width: rem(11);
+    height:rem(13);
+}
+
+.footer__bloc{
+    @include flexColumn;
+    gap:rem(7);
+}
+
+@media screen and (min-width:768px){
+    .fonctionnement{
+        @include flexRow;
+        
+        
+    }
+
+}
+
+
+
+
