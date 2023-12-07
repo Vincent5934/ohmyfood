@@ -139,18 +139,21 @@ header{
 
 // FONCTIONNEMENT
 .fonctionnement{
-    @include flexColumnCenter;
-    gap:rem(25);
+    @include flexColumn;
     padding-bottom: rem(30);
 }
 
 .fonctionnement__titre{
     font-size: rem(24);
     font-weight: 700;
-    padding:rem(48) rem(80) rem(26) rem(20);
-    
+    padding:rem(48) rem(80) rem(26) rem(20); 
 }
 
+.fonctionnement__bloc{
+    @include flexColumnCenter;
+    gap:rem(25);
+
+}
 .fonctionnement__carte{
     display:flex;
     width: rem(322);
@@ -219,14 +222,12 @@ header{
 
 // FOOTER
 footer{
+    @include flexColumn;
     width: 100%;
     max-width: 1440px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
     gap: rem(16);
     background: $background-footer;
     padding:rem(22) rem(25) rem(22) rem(25);
@@ -259,12 +260,94 @@ footer{
     gap:rem(7);
 }
 
-@media screen and (min-width:768px){
-    .fonctionnement{
-        @include flexRow;
-        
-        
+@media screen and (min-width:1024px){
+
+    .header__logo{
+        height:auto;
+        margin:rem(30) 0 rem(31.8) 0;
+        width: rem(200);
     }
+
+    h1{
+        font-size: rem(40);
+        font-weight: 700;
+        font-family: 'roboto', sans-serif;
+        margin:0;
+    }
+
+    h3{
+        font-size: rem(16);
+        font-weight: 500;
+    }
+
+    .fonctionnement{
+        @include flexColumn;
+        padding:0;
+        margin: rem(50) rem(180) rem(50) rem(180);
+        gap:rem(25);
+    }
+
+    .fonctionnement__bloc{
+        @include flexRow;
+        justify-content: space-between;
+    }
+
+    .fonctionnement__titre{
+        padding: 0;
+    }
+
+    .restaurant{
+        padding: rem(30) rem(180) rem(30) rem(180);
+    }
+
+    .restaurant__bloc{
+        @include flexRow;
+        margin-top:rem(28);
+        gap:rem(100);  
+    }
+
+    .restaurant__carte {
+        width: 100%;
+        height:rem(251);
+    }
+
+    .restaurant__carte--img{
+        width: 100%;
+    }
+
+    .restaurant__titre{
+        padding:0;
+    }
+
+    h4{
+        margin: rem(10) rem(22) 0 rem(396);
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: rem(30) rem(25) rem(30) rem(25); 
+        gap:rem(16);
+    }
+    
+    p{
+        font-weight: 400;
+    }
+
+    .footer__bloc{
+        @include flexRow;
+        gap:rem(20);
+    }
+
+
+
+
+
+
+
+
+
+   
 
 }
 
