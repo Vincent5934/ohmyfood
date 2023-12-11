@@ -217,7 +217,7 @@ footer {
 .footer__text {
   display: flex;
   flex-direction: row;
-  gap: 0.6875rem;
+  gap: 1.125rem;
 }
 
 .fa-handshake-angle {
@@ -301,6 +301,14 @@ footer {
   .footer__bloc {
     display: flex;
     flex-direction: row;
-    gap: 1.25rem;
+    gap: 0.9375rem;
+    padding-top: 0.4375rem;
+  }
+  .footer__logo {
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+  }
+  .footer__res {
+    margin-left: 1.875rem;
   }
 }/*# sourceMappingURL=style_accueil.css.map */

@@ -67,17 +67,17 @@ p {
   font-weight: 300;
 }
 
-.btn_p{
-    font-weight: 500;
+.btn_p {
+  font-weight: 500;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
-  }
+  color: inherit;
+  text-decoration: none;
+}
 
-.bold{
-    font-weight: 700;
+.bold {
+  font-weight: 700;
 }
 
 // HEADER
@@ -131,9 +131,9 @@ header {
 }
 
 .trait {
-  border-bottom:rem(3) solid $tertiary;
+  border-bottom: rem(3) solid $tertiary;
   padding-bottom: rem(5);
-  text-transform: uppercase;  
+  text-transform: uppercase;
   width: rem(40);
 }
 
@@ -213,7 +213,49 @@ footer {
   gap: rem(7);
 }
 
-.footer__p{
-    font-weight: 500;
+.footer__p {
+  font-weight: 500;
 }
 
+@media screen and (min-width: 1024px) {
+  header {
+    gap: rem(572);
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .background {
+    margin-left: rem(192.5);
+    margin-right: rem(192.5);
+  }
+}
+
+footer{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: rem(30) rem(25) rem(30) rem(25); 
+  gap:rem(16);
+}
+
+p{
+  font-weight: 400;
+}
+
+.footer__bloc{
+  @include flexRow;
+  gap:rem(15);
+  padding-top: rem(7);
+
+}
+
+.footer__logo{
+  margin-left: rem(50);
+  margin-right: rem(50);
+}
+
+.footer__res{
+  margin-left:rem(30) ;
+}

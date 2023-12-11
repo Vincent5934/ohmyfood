@@ -242,7 +242,7 @@ footer{
 
 .footer__text{
     @include flexRow;
-    gap:rem(11);
+    gap:rem(18);
 }
 
 .fa-handshake-angle {
@@ -258,6 +258,7 @@ footer{
 .footer__bloc{
     @include flexColumn;
     gap:rem(7);
+    
 }
 
 @media screen and (min-width:1024px){
@@ -336,7 +337,20 @@ footer{
 
     .footer__bloc{
         @include flexRow;
-        gap:rem(20);
+        gap:rem(15);
+        padding-top: rem(7);
+
+    }
+   
+    .footer__logo{
+        margin-left: rem(50);
+        margin-right: rem(50);
+    }
+
+    .footer__res{
+        margin-left:rem(30) ;
+    }
+
     }
 
 
@@ -349,7 +363,7 @@ footer{
 
    
 
-}
+
 
 
 

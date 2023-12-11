@@ -186,4 +186,44 @@ footer {
 
 .footer__p {
   font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    gap: 35.75rem;
+  }
+  .img {
+    width: 100%;
+    height: auto;
+  }
+  .background {
+    margin-left: 12.03125rem;
+    margin-right: 12.03125rem;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1.875rem 1.5625rem 1.875rem 1.5625rem;
+  gap: 1rem;
+}
+
+p {
+  font-weight: 400;
+}
+
+.footer__bloc {
+  display: flex;
+  flex-direction: row;
+  gap: 0.9375rem;
+  padding-top: 0.4375rem;
+}
+
+.footer__logo {
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
+}
+
+.footer__res {
+  margin-left: 1.875rem;
 }/*# sourceMappingURL=style_restaurants.css.map */
