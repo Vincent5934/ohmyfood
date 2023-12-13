@@ -44,12 +44,12 @@ padding:0;
 font-family: 'Roboto', sans-serif;
 }
 
-main{
-    width: 100%;
-    max-width: 1440px;
+body{
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-   
+    max-width: 1440px;
+    // width: 100%;
 }
 
 a {
@@ -80,9 +80,12 @@ h4{
     background-color:$tertiary;
     font-size: rem(14);
     font-weight: 500;
-    margin:rem(15) rem(12) 0 rem(248);
+    // margin:rem(15) rem(12) 0 rem(248);
     padding: rem(7) rem(9) rem(6) rem(9);
     position: absolute;
+    top:rem(13);
+    right:rem(22);
+    
     
 }
 
@@ -141,6 +144,7 @@ header{
 .fonctionnement{
     @include flexColumn;
     padding-bottom: rem(30);
+   
 }
 
 .fonctionnement__titre{
@@ -152,7 +156,7 @@ header{
 .fonctionnement__bloc{
     @include flexColumnCenter;
     gap:rem(25);
-
+    
 }
 .fonctionnement__carte{
     display:flex;
@@ -186,17 +190,27 @@ header{
 .restaurant{
     background: $background;
     padding-bottom: rem(50);
+    &__bloc{
+        @include flexColumnCenter;
+    }
     }
 
-.restaurant__bloc {
-    @include flexColumnCenter;
-    }
+// .restaurant__bloc {
+//     @include flexColumnCenter;
+//     }
 
 .restaurant__titre{
     font-size: rem(24);
     font-weight: 700;
     padding:rem(48) rem(80) rem(26) rem(20);    
     }
+
+.fa-heart{
+    position: absolute;
+    bottom:rem(50);
+    right:rem(25);
+}
+
 
 .restaurant__carte{
     width:rem(346);
@@ -205,6 +219,7 @@ header{
     border-radius:rem(15);
     box-shadow:0 rem(4) rem(15) 0 rgba(0,0,0,0.10);
     margin-bottom: rem(18); 
+    position:relative;
     }
 
 .restaurant__carte--img{
@@ -212,6 +227,7 @@ header{
     height:rem(178);
     object-fit: cover;
     border-radius: rem(15) rem(15) 0 0;
+    
     }
 
 .restaurant__carte--text{
@@ -240,11 +256,6 @@ footer{
     font-weight: 400;
 }
 
-.footer__text{
-    @include flexRow;
-    gap:rem(18);
-}
-
 .fa-handshake-angle {
     width: rem(11);
     height:rem(13);
@@ -258,7 +269,10 @@ footer{
 .footer__bloc{
     @include flexColumn;
     gap:rem(7);
-    
+    & .footer__text{
+        @include flexRow;
+        gap:rem(18);
+    }
 }
 
 @media screen and (min-width:1024px){
@@ -320,28 +334,20 @@ footer{
         padding:0;
     }
 
-    h4{
-        margin: rem(10) rem(22) 0 rem(396);
-    }
+    // h4{
+    //     margin: rem(10) rem(22) 0 rem(396);
+    // }
 
-    footer{
+    footer {
         display: flex;
         flex-direction: row-reverse;
         padding: rem(30) rem(25) rem(30) rem(25); 
         gap:rem(16);
-    }
-    
-    p{
-        font-weight: 400;
+        & p{
+            font-weight: 400;
+            }   
     }
 
-    .footer__bloc{
-        @include flexRow;
-        gap:rem(15);
-        padding-top: rem(7);
-
-    }
-   
     .footer__logo{
         margin-left: rem(50);
         margin-right: rem(50);
@@ -351,7 +357,12 @@ footer{
         margin-left:rem(30) ;
     }
 
-    }
+    .footer__bloc{
+        @include flexRow;
+        gap:rem(15);
+        padding-top: rem(7); 
+}
+}
 
 
 

@@ -43,41 +43,35 @@ $tertiary: #99e2d0;
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  width: 100%;
-  max-width: 1440px;
-  box-sizing: border-box;
+body {
   margin-left: auto;
   margin-right: auto;
-}
-
-h1 {
+  max-width: 1440px;
+  width: 100%;
+  & h1{
   font-family: "shrikhand";
   font-weight: 400;
   font-size: rem(28);
-}
-
-h2 {
-  font-size: rem(18);
-  font-weight: 500;
-}
-
-p {
-  font-size: rem(15);
-  font-weight: 300;
-}
-
-.btn_p {
-  font-weight: 500;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.bold {
-  font-weight: 700;
+  }
+  & h2{
+    font-size: rem(18);
+    font-weight: 500;
+  }
+  & p{
+    font-size: rem(15);
+    font-weight: 300;
+  }
+  & a{
+    color: inherit;
+    text-decoration: none;
+  }
+  & .bold {
+    font-weight: 700;
+  }
+  & .img {
+    width: rem(375);
+    height: rem(275);
+  }
 }
 
 // HEADER
@@ -87,24 +81,17 @@ header {
   display: flex;
   gap: rem(42);
   align-items: center;
-}
-
-.logo {
+  & .logo {
   margin: 0 rem(19) 0 rem(16);
   width: rem(162);
   height: rem(44);
-}
-
-.fa-arrow-left {
+  }
+  & .fa-arrow-left {
   width: rem(30);
   height: rem(30);
   display: flex;
   align-items: center;
-}
-
-.img {
-  width: rem(375);
-  height: rem(275);
+  }
 }
 
 .background {
@@ -113,6 +100,15 @@ header {
   position: relative;
   border-top-right-radius: rem(30);
   border-top-left-radius: rem(30);
+  margin-left: auto;
+  margin-right: auto;
+    & .nom__resto {
+    @include flexRow;
+    padding: rem(32) rem(17) rem(40) rem(17);
+    padding-right: rem(24);
+    align-items: baseline;
+    gap: rem(30);
+  }
 }
 
 .mainContainer {
@@ -120,101 +116,84 @@ header {
   gap: rem(40);
   padding-left: rem(15);
   padding-right: rem(15);
-}
-
-.nom__resto {
-  @include flexRow;
-  padding: rem(32) rem(17) rem(40) rem(17);
-  padding-right: rem(24);
-  align-items: baseline;
-  gap: rem(30);
-}
-
-.trait {
-  border-bottom: rem(3) solid $tertiary;
-  padding-bottom: rem(5);
-  text-transform: uppercase;
-  width: rem(40);
-}
-
-.menu__bloc {
-  @include flexColumn;
-  gap: rem(12);
-}
-
-.carte {
-  @include flexColumn;
-  gap: rem(5);
-  padding: rem(15);
-  background-color: white;
-  border-radius: rem(15);
-  box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.1);
-}
-
-.carte__sub {
-  @include flexRow;
-  justify-content: space-between;
-}
-
-.order {
-  @include flexColumnCenter;
-}
-
-.btn {
-  @include flexRowCenter;
-  width: rem(218);
-  height: rem(50);
-  background: linear-gradient($secondary, $primary);
-  border-radius: rem(25);
-  box-shadow: 0 rem(4) rem(18) 0 rgba(0, 0, 0, 0.25);
-  color: white;
-  margin-bottom: rem(40);
+  width: auto;
+  & .menu__bloc {
+    @include flexColumn;
+    gap: rem(12);
+    & .trait {
+      border-bottom: rem(3) solid $tertiary;
+      padding-bottom: rem(5);
+      text-transform: uppercase;
+      width: rem(40);
+    }
+    & .carte {
+      @include flexColumn;
+      gap: rem(5);
+      padding: rem(15);
+      background-color: white;
+      border-radius: rem(15);
+      box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.1);
+    }
+    & .carte__sub {
+      @include flexRow;
+      justify-content: space-between;
+    }
+  }
+  & .order {
+    @include flexColumnCenter;  
+      & .btn {
+      @include flexRowCenter;
+      width: rem(218);
+      height: rem(50);
+      background: linear-gradient($secondary, $primary);
+      border-radius: rem(25);
+      box-shadow: 0 rem(4) rem(18) 0 rgba(0, 0, 0, 0.25);
+      color: white;
+      margin-bottom: rem(40);
+        & .btn__p{
+        font-weight: 500;
+        }
+      }
+    }
 }
 
 // FOOTER
 footer {
-  width: 100%;
-  max-width: 1440px;
+  @include flexColumn;
+  background: $background-footer;
   box-sizing: border-box;
+  color: white;
+  gap: rem(16);
+  justify-content: flex-start;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: rem(16);
-  background: $background-footer;
+  max-width: 1440px;
   padding: rem(22) rem(25) rem(22) rem(25);
-  color: white;
-}
-
-.footer__logo {
-  font-family: "shrikhand", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.footer__text {
-  @include flexRow;
-  gap: rem(11);
-}
-
-.fa-handshake-angle {
-  width: rem(11);
-  height: rem(13);
-}
-
-.fa-utensils {
-  width: rem(11);
-  height: rem(13);
-}
-
-.footer__bloc {
-  @include flexColumn;
-  gap: rem(7);
-}
-
-.footer__p {
-  font-weight: 500;
+  width: 100%;
+  & p{
+    font-weight: 500;
+  }
+  & .footer__logo {
+    font-family: "shrikhand", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  & .footer__bloc {
+    @include flexColumn;
+    gap: rem(7);
+    & .footer__text {
+      @include flexRow;
+      gap: rem(11);
+      & .fa-handshake-angle {
+        width: rem(11);
+        height: rem(13);
+      }
+      & .fa-utensils {
+        width: rem(11);
+        height: rem(13);
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -223,39 +202,59 @@ footer {
   }
 
   .img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  object-fit: cover;
   }
 
   .background {
     margin-left: rem(192.5);
     margin-right: rem(192.5);
+    top:rem(30);
+    & .nom__resto{
+      @include flexRowCenter;
+      }
+    & .menu__bloc{
+      margin-left: 19%;
+      margin-right: 19%;
+      }
   }
-}
 
-footer{
+  footer {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
+  margin-top: rem(30);
   padding: rem(30) rem(25) rem(30) rem(25); 
   gap:rem(16);
-}
+  }
 
-p{
-  font-weight: 400;
-}
+  .footer__logo{  
+    margin-left: rem(50);
+    margin-right: rem(50);
+    font-weight: 400;
+  }
 
-.footer__bloc{
-  @include flexRow;
-  gap:rem(15);
-  padding-top: rem(7);
+  .footer__bloc {
+    @include flexRow;
+    gap: rem(25);
+  }
 
-}
+  .footer__text {
+      @include flexRow;
+      gap: rem(11);
+  }
 
-.footer__logo{
-  margin-left: rem(50);
-  margin-right: rem(50);
-}
+  .fa-handshake-angle {
+    width: rem(11);
+    height: rem(13);
+    }
 
-.footer__res{
+    .fa-utensils {
+    width: rem(11);
+    height: rem(13);
+    }
+
+  .footer__res{
   margin-left:rem(30) ;
+  }
 }
