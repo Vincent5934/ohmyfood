@@ -174,7 +174,7 @@ footer .footer__logo {
   .img {
     width: 100%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
   .background {
     margin-left: 12.03125rem;
@@ -213,4 +213,4 @@ footer .footer__logo {
   footer .footer__bloc .footer__res {
     margin-left: 1.875rem;
   }
-} /*# sourceMappingURL=style_restaurants.css.map */
+}/*# sourceMappingURL=style_restaurants.css.map */
