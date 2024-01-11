@@ -172,4 +172,33 @@ p {
     }
   }
 
+  @media screen and (min-width: 1024px) {
+    .background {
+      margin-left: rem(192.5);
+      margin-right: rem(192.5);
+      top: rem(30);
+      .nom__resto {
+        @include flexRowCenter;
+        position:relative;
+        width:400px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      .menu__bloc {
+        margin-left: 19%;
+        margin-right: 19%;
+      }
+    }
+  
+    .fa-heart1{
+      left:rem(380);
+    }
+  
+    .fa-heart2{
+      left:rem(380);
+    }
+}
+
+
+
 

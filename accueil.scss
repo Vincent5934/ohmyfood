@@ -166,5 +166,63 @@ ul {
         right:rem(25);
         top:rem(205);
       }   
+
+      @media screen and (min-width:1024px) {
+
+        .header__logo{
+            height:auto;
+            margin:rem(30) 0 rem(31.8) 0;
+            width: rem(200);
+        }
+    
+        h1{
+            font-size: rem(40);
+            font-weight: 700;
+            font-family: 'roboto', sans-serif;
+            margin:0;
+        }
+    
+        h3{
+            font-size: rem(16);
+            font-weight: 500;
+        }
+    
+        .fonctionnement{
+            @include flexColumn;
+            padding:0;
+            margin: rem(50) rem(180) rem(50) rem(180);
+            gap:rem(25);
+            &__bloc{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            &__titre{
+                padding: 0;
+            }
+        }
+    
+        .restaurant{
+            padding: rem(30) rem(180) rem(30) rem(180);
+            &__bloc{
+                display: flex;
+                flex-direction: row;
+                margin-top:rem(28);
+                gap:rem(100);  
+            }
+            &__titre{
+                padding:0;
+            }
+            &__carte {
+                width: 100%;
+                height:rem(251);
+                &--img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
     
      
