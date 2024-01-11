@@ -88,30 +88,6 @@ body a {
   height: 0.8125rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 1.875rem 1.5625rem 1.875rem 1.5625rem;
-    gap: 1rem;
-  }
-  .footer p {
-    font-weight: 400;
-  }
-  .footer__logo {
-    margin-left: 3.125rem;
-    margin-right: 3.125rem;
-  }
-  .footer__bloc {
-    display: flex;
-    flex-direction: row;
-    gap: 0.9375rem;
-    padding-top: 0.4375rem;
-  }
-  .footer__bloc--res {
-    margin-left: 1.875rem;
-  }
-}
 .preloader {
   background-color: white;
   position: fixed;
@@ -462,4 +438,4 @@ ul {
   .restaurant__carte--img {
     width: 100%;
   }
-}
+}/*# sourceMappingURL=accueil.css.map */
