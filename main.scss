@@ -1,0 +1,123 @@
+// VARIABLES
+$background: #f6f6f6;
+$background-location: #eaeaea;
+$background-footer: #353535;
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+
+// FUNCTION
+@function rem($size, $base: 16) {
+  @return 1rem * $size / $base;
+}
+
+// MIXINS
+@mixin flexRowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+// GENERAL
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.fa-heart1 {
+  background-color: $background;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  opacity: 1;
+  position: absolute;
+  right: rem(25);
+  top: rem(205);
+  font-size: rem(22);
+  transition: opacity 0.5s ease-out;
+  &:hover {
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.fa-heart2 {
+  background-image: linear-gradient($primary, $secondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0 $background;
+  position: absolute;
+  opacity: 0;
+  right: rem(25);
+  top: rem(205);
+  font-size: rem(22);
+  transition: all 0.5s ease-in;
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+    scale: 1.1;
+  }
+}
+
+// FOOTER
+.footer {
+  @include flexColumn;
+  background: $background-footer;
+  box-sizing: border-box;
+  color: white;
+  gap: rem(16);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: rem(22) rem(25) rem(22) rem(25);
+  width: 100%;
+  &__logo {
+    font-family: "shrikhand", sans-serif;
+    font-size: rem(18);
+    font-weight: 400;
+  }
+  &__bloc {
+    @include flexColumn;
+    gap: rem(7);
+    &--text {
+      display: flex;
+      gap: rem(18);
+    }
+    .fa-utensils {
+      width: rem(11);
+      height: rem(13);
+    }
+    .fa-handshake-angle {
+      width: rem(11);
+      height: rem(13);
+    }
+  }
+}
+

@@ -1,0 +1,175 @@
+@import "./main.scss";
+@import "./anim_menu.scss";
+
+
+h1 {
+  font-family: "shrikhand";
+  font-weight: 400;
+  font-size: rem(28);
+}
+
+h2 {
+  font-size: rem(18);
+  font-weight: 500;
+}
+p {
+  font-size: rem(15);
+  font-weight: 300;
+}
+
+.img {
+  max-width: 100%;
+  max-height: rem(512);
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+.img__noteEnchante {
+  max-width: 100%;
+  max-height: rem(250);
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+.nom__resto {
+  display: flex;
+  padding: rem(32) rem(17) rem(40) rem(17);
+  position: relative;
+}
+
+.background {
+    background-color: $background;
+    border-top-right-radius: rem(30);
+    border-top-left-radius: rem(30);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: rem(-60);
+  }
+  
+  .fa-heart1{
+    left:rem(320);
+    top:rem(40);
+  }
+  
+  .fa-heart2{
+    left:rem(320);
+    top:rem(40);
+  }
+
+  // HEADER
+.header {
+    @include flexRowCenter;
+    margin: rem(14) auto rem(13) auto;
+    width: auto;
+    &__logo {
+      height: rem(42);
+      width: rem(162);
+    }
+    .fa-arrow-left {
+      position: absolute;
+      left: 17px;
+      top: 17px;
+      font-size: 30px;
+    }
+  }
+
+  // ENSEMBLE DES CARTES MENUS
+.mainContainer {
+    @include flexColumn;
+    gap: rem(40);
+    padding-left: rem(15);
+    padding-right: rem(15);
+    width: auto;
+    .menu__bloc {
+      @include flexColumn;
+      gap: rem(12);
+    .trait {
+        border-bottom: rem(3) solid $tertiary;
+        padding-bottom: rem(5);
+        text-transform: uppercase;
+        width: rem(40);
+      }
+      .carte {
+        display: flex;
+        background-color:white;
+        border-radius: rem(15);
+        box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.1);
+        padding: rem(13);
+        position: relative;
+        overflow: hidden;
+        &:hover {
+          cursor: pointer;
+          & p, h2 {
+            width:220px;
+            position:relative;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+          }
+          .carte__prix {
+            transform: translate(-50px);
+            position: absolute;
+            width: 30px;
+          }
+          .fa-circle-check {
+            transform: translate(-55px);
+          }
+        }
+        &__text {
+          @include flexColumn;
+          gap: rem(5);
+        }
+        &__prix {
+          font-weight: 700;
+          position: absolute;
+          right: rem(20);
+          bottom: rem(15);
+          transition: transform 0.3s;
+          height: 20px;
+          background-color:white;
+        }
+        .fa-circle-check {
+          position: absolute ;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: rem(55);
+          height: rem(80);
+          background-color: $tertiary;
+          right: rem(-55);
+          top: rem(-3);
+          transition: transform 0.3s;
+          color:white;
+          font-size:20px;
+        }
+      }
+    }
+}
+
+// BOUTON COMMANDER
+.order {
+    @include flexColumnCenter;
+    &__btn {
+      @include flexRowCenter;
+      background: linear-gradient($secondary, $primary);
+      border-radius: rem(25);
+      box-shadow: 0 rem(4) rem(18) 0 rgba(0, 0, 0, 0.25);
+      color: white;
+      height: rem(50);
+      margin-bottom: rem(40);
+      transition:all 0.5s;
+      width: rem(218);
+      &--p {
+        font-weight: 500;
+      }
+      &:hover{
+        cursor: pointer;
+        opacity: 0.8; 
+        box-shadow: 0 rem(6) rem(20) 0 rgba(0,0,0,0.45)
+        }
+    }
+  }
+
+
