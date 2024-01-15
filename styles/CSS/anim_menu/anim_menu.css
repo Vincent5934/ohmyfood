@@ -1,16 +1,16 @@
 .anim_entrees {
-  animation: test 1.5s;
+  animation: menu 1.5s;
 }
 
 .anim_plats {
-  animation: test 2s;
+  animation: menu 2s;
 }
 
 .anim_desserts {
-  animation: test 3s;
+  animation: menu 3s;
 }
 
-@keyframes test {
+@keyframes menu {
   0% {
     transform: translate(-100%);
   }
